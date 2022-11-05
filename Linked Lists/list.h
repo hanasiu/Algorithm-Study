@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 #include <vector>
 
@@ -25,8 +26,3 @@ void deleteAfter(const shared_ptr<listNode<int>>& node) {
 	node->next = node->next->next;
 }
 
-int main()
-{
-	
-	return 0;
-}
