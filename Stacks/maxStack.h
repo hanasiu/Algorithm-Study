@@ -19,7 +19,7 @@ class Stack {
 	}
 
 	void push(int x) {
-		element_with_cached_max_.emplace(elementWithCachedMax{ x, std::max(x, (empty() ? x : max())) });
+		element_with_cached_max_.emplace(elementWithCachedMax{ x, std::max(x, (empty() ? x : getMax())) });
 	}
 private:
 	struct elementWithCachedMax {
