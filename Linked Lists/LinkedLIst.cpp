@@ -68,4 +68,56 @@ void LinkedList::deleteNode(int nodeOffset)
 	delete temp1;
 }
 
-//https://www.geeksforgeeks.org/program-to-implement-singly-linked-list-in-c-using-class/
+void LinkedList::insertNode(int data)
+{
+	Node* newNode = new Node(data);
+
+	if (head == NULL) {
+		head = newNode;
+		return;
+	}
+
+	Node* temp = head;
+	while (temp->next != NULL) {
+		temp = temp->next;
+	}
+
+	temp->next = newNode;
+}
+
+void LinkedList::printList()
+{
+	Node* temp = head;
+
+	if (head == NULL) {
+		cout << "List empty" << endl;
+		return;
+	}
+
+	while (temp != NULL) {
+		cout << temp->data << " ";
+		temp = temp->next;
+	}
+}
+
+int main()
+{
+	LinkedList list;
+	
+	list.insertNode(1);
+	list.insertNode(2);
+	list.insertNode(3);
+	list.insertNode(4);
+
+	cout << "Elements of the list are: ";
+
+	list.printList();
+	cout << endl;
+
+	list.deleteNode(2);
+
+	cout << "Elements of the list are: ";
+	list.printList();
+	cout << endl;
+	return 0;
+}
