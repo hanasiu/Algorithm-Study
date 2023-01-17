@@ -22,8 +22,11 @@ public:
 class LinkedList {
 	Node* head;
 public:
+	
 	LinkedList() { head = NULL; }
 
+	Node* returnHead() { return head; }
+	Node* inputHead(Node* i) { head = i; return head; }
 	void insertNode(int);
 	void printList();
 	void deleteNode(int);
