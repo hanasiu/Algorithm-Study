@@ -27,6 +27,13 @@ public:
 
 	Node* returnHead() { return head; }
 	Node* inputHead(Node* i) { head = i; return head; }
+	Node* returnLastNode() { 
+		Node* index = head;
+		while (index->next) {
+			index = index->next;
+		}
+		return index;
+	}
 	void insertNode(int);
 	void printList();
 	void deleteNode(int);
@@ -101,26 +108,4 @@ void LinkedList::printList()
 		cout << temp->data << " ";
 		temp = temp->next;
 	}
-}
-
-int main()
-{
-	LinkedList list;
-	
-	list.insertNode(1);
-	list.insertNode(2);
-	list.insertNode(3);
-	list.insertNode(4);
-
-	cout << "Elements of the list are: ";
-
-	list.printList();
-	cout << endl;
-
-	list.deleteNode(2);
-
-	cout << "Elements of the list are: ";
-	list.printList();
-	cout << endl;
-	return 0;
 }
