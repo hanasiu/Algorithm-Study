@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include <vector>
 #include <queue>
@@ -39,12 +38,11 @@ public:
                 parent = focusNode;
 
                 if (data < focusNode->data) {
-                    addNode()
-                   /* focusNode = focusNode->left;
+                    focusNode = focusNode->left;
                     if (focusNode == nullptr) {
                         parent->left = newNode;
                         return;
-                    }*/
+                    }
                 }
                 else {
                     focusNode = focusNode->right;
@@ -107,12 +105,12 @@ int main() {
     tree.addNode(9);
     tree.addNode(4);
     tree.addNode(10);
-    
+
 
     tree.preOrderTraversal(tree.root);
     cout << endl;
 
-    
+
 
     vector<vector<int>> i = BinaryTreeDepthOrder(&tree);
     for (auto k : i) {
@@ -121,7 +119,8 @@ int main() {
         }
         cout << endl;
     }
-    
+
     return 0;
 }
+
 
