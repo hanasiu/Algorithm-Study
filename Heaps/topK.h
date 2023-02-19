@@ -20,7 +20,7 @@ vector<string> topK(int k, vector<string>::const_iterator stream_begin,
 		stream_begin = std::next(stream_begin);
 	}
 	vector<string> result;
-	while (!empty(min_heap)) {
+	while (!min_heap.empty()) {
 		result.emplace_back(min_heap.top());
 		min_heap.pop();
 	}
