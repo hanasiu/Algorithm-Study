@@ -1,6 +1,8 @@
 #include <iostream>
 #include <vector>
 #include <queue>
+#include <memory>
+#include <limits>
 
 using namespace std;
 
@@ -41,7 +43,7 @@ bool IsBinaryTreeBSTByQueue(const unique_ptr<BinaryTreeNode<int>>& tree) {
 	bfs_queue.emplace(QueueEntry{ tree, numeric_limits<int>::min(),
 		numeric_limits<int>::max() });
 
-	while (!empty(bfs_queue)) {
+	while (!bfs_queue.empty()) {
 		if (bfs_queue.front().tree_node.get()) {
 			if (bfs_queue.front().tree_node->data < bfs_queue.front().lower_bound ||
 				bfs_queue.front().tree_node->data > bfs_queue.front().upper_bound) {
