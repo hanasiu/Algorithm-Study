@@ -11,7 +11,7 @@ void ReverseWords(string* s) {
         reverse((*s).begin() + start, (*s).begin() + finish);
         start = finish + 1;
     }
-    reverse((*s).begin() + start, (*s).end());
+    reverse((*s).begin() + start, (*s).end());  
 }
 
 int main() {
