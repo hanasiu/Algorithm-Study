@@ -4,9 +4,10 @@
 using namespace std;
 
 int SearchSmallest(const vector<int>& A){
-    int left = 0, right = size(A) -1;
+    int left = 0, right = A.size() -1;
     while(left<right) {
-        if(int mid = left + ((right - left)/2); A[mid] > A[right]) {
+        int mid = left + ((right - left)/2); 
+        if(A[mid] > A[right]) {
             left = mid + 1;
         } else {
             right = mid;
