@@ -1,3 +1,3 @@
-<Elements of Programming Interviews in C++>  
+from <Elements of Programming Interviews in C++>  
 
 https://github.com/adnanaziz/EPIJudge  
