@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <memory>
 
 using namespace std;
 
@@ -31,9 +32,10 @@ int OptimumSubjectToItemAndCapacity(const vector<Item>& items, int k, // input, 
 }
 
 int OptimumSubjectToCapacity(const vector<Item>& items, int capacity) {
+	vector<vector<int>> i(items.size(), vector<int>(capacity + 1, -1));
 	return OptimumSubjectToItemAndCapacity(
 		items, items.size() -1, capacity,
-		make_unique<vector<vector<int>>>(items.size(), vector<int>(capacity + 1, -1)).get());
+		&i);
 }
 
 int main()
