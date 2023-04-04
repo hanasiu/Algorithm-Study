@@ -47,7 +47,5 @@ int main()
 	Item f = Item(15, 200);
 	vector<Item> items = { a,b,c,d,f };
 	cout << OptimumSubjectToCapacity(items, 60);
-	
-
 	return 0;
 }
