@@ -1,6 +1,7 @@
 {
-    "files.associations": {
-        "*.ejs": "html",
-        "new": "cpp"
-    }
+  "files.associations": {
+    "*.ejs": "html",
+    "new": "cpp",
+    "limits": "cpp"
+  }
 }

@@ -38,4 +38,3 @@ void DeleteTree(BstNode<T>* root) {
         delete root;
     }
 }
-
