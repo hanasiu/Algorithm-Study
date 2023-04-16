@@ -1,24 +1,10 @@
 #include <iostream>
 #include <vector>
 #include <limits>
+#include "BST.h"
 
 using namespace std;
 
-struct BstNode {
-    int data;
-    BstNode* left;
-    BstNode* right;
-
-    // Constructor
-    BstNode(int data, BstNode* left = nullptr, BstNode* right = nullptr)
-        : data(data), left(left), right(right) {}
-
-    // Destructor
-    ~BstNode() {
-        delete left;
-        delete right;
-    }
-};
 
 BstNode* RebuildBSTFromPreorderOnValueRange(const vector<int>& preorder_sequence, int lower_bound, int upper_bound, int* root_idx_ptr) {
     int& root_idx = *root_idx_ptr;
