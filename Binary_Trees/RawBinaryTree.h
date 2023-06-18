@@ -6,12 +6,16 @@ struct BinaryTreeNode {
     T data;
     BinaryTreeNode* left;
     BinaryTreeNode* right;
-    BinaryTreeNode* parent;
+    //BinaryTreeNode* parent;
 
-    BinaryTreeNode(T val) : data(val), left(nullptr), right(nullptr), parent(nullptr) {}
+    BinaryTreeNode(T val) : data(val), left(nullptr), right(nullptr) {}
+    BinaryTreeNode(T val, BinaryTreeNode* l, BinaryTreeNode* r) : data(val), left(l), right(r) {}
 
     ~BinaryTreeNode() {
-        delete left;
-        delete right;
-    }
+    delete left;
+    left = nullptr;
+    delete right;
+    right = nullptr;
+}
+
 };
