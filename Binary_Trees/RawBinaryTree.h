@@ -17,5 +17,4 @@ struct BinaryTreeNode {
     delete right;
     right = nullptr;
 }
-
 };
